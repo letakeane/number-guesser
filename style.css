@@ -1,0 +1,21 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  background-color: #404041;
+  height: 50px;
+}
+
+h1 {
+}
+
+#number-title {
+  color: #ED458B;
+  font-weight: 700;
+}
+
+#guesser-title {
+  color: #E6E7E8;
+  font-weight: 300;
+}
