@@ -46,7 +46,7 @@ input {
 #guess-button {
   background-color: #929497;
   border: none;
-  border-radius: 50px;
+  border-radius: 15px;
   color: #ffffff;
   text-align: center;
   text-decoration: none;
@@ -60,7 +60,7 @@ input {
 #clear-button {
   background-color: #929497;
   border: none;
-  border-radius: 50px;
+  border-radius: 15px;
   color: #ffffff;
   text-align: center;
   text-decoration: none;
@@ -74,6 +74,7 @@ input {
 #notification {
   color: #404041;
   text-align: center;
+  margin: 20px 0px 0px 0px;
 }
 
 #display-last-guess {
@@ -81,11 +82,13 @@ input {
   font-size: 200px;
   font-weight: 300;
   text-align: center;
+  margin: -20px 0px 10px 0px;
 }
 
 #clue {
   color: #404041;
   text-align: center;
+  margin: 20px;
 }
 
 #reset-container {
@@ -95,7 +98,7 @@ input {
 #reset-button {
   background-color: #929497;
   border: none;
-  border-radius: 50px;
+  border-radius: 15px;
   color: #ffffff;
   text-align: center;
   text-decoration: none;
