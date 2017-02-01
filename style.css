@@ -43,8 +43,8 @@ input {
   text-align: center;
 }
 
-#guess-button {
-  background-color: #929497;
+button{
+  background-color: #D0D2D3;
   border: none;
   border-radius: 15px;
   color: #ffffff;
@@ -53,22 +53,39 @@ input {
   display: inline-block;
   font-size: 20px;
   font-weight: 300;
+  margin: 20px;
+}
+
+button:hover {
+  background-color: #EB008B;
+}
+
+#guess-button {
+  display: inline-block;
+  background-color: #929497;
   width: 22%;
-  margin: 20px 20px;
+}
+
+#guess-button:hover {
+  background-color: #EB008B;
 }
 
 #clear-button {
-  background-color: #929497;
-  border: none;
-  border-radius: 15px;
-  color: #ffffff;
-  text-align: center;
-  text-decoration: none;
   display: inline-block;
-  font-size: 20px;
-  font-weight: 300;
   width: 22%;
-  margin: 20px 20px;
+}
+
+#clear-button:hover {
+  background-color: #D0D2D3;
+}
+
+.clear-enable {
+  background-color: #929497;
+  width: 22%;
+}
+
+.clear-enable:hover {
+  background-color: #EB008B;
 }
 
 #notification {
@@ -96,14 +113,98 @@ input {
 }
 
 #reset-button {
-  background-color: #929497;
-  border: none;
-  border-radius: 15px;
-  color: #ffffff;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  font-weight: 300;
   width: 50%;
+}
+
+#reset-button:hover{
+  background-color: #D0D2D3;
+}
+
+.reset-enable {
+  background-color: #929497;
+}
+
+.reset-enable:hover {
+  background-color: #EB008B;
+}
+
+#user-define-group {
+  text-align: center;
+}
+
+#user-min {
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  width: 10em;
+  margin: 10px;
+}
+
+#user-max {
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  width: 10em;
+  margin: 10px;
+}
+
+
+
+/*mobile layout*/
+@media screen and (max-width: 700px) {
+  input {
+    width: 95%;
+  }
+
+  button {
+    width: 95%;
+    display: block;
+    margin: 20px 10px 5px 10px;
+  }
+
+  #input-buttons-group {
+    text-align: none;
+  }
+
+  #guess-button {
+    width: 95%;
+    position: relative;
+  }
+
+  #clear-button {
+    width: 95%;
+
+    position: relative;
+  }
+
+  #reset-container {
+    display: block;
+    margin: auto;
+  }
+
+  #reset-button {
+    width: 95%;
+    display: block;
+    margin: 20px;
+  }
+}
+
+
+@media screen and (max-width: 645px;) {
+  button{
+    width: 100%;
+    margin: 20px 0px 5px 0px;
+  }
+
+  #guess-button {
+    display: block;
+    width: 100%;
+    margin: 20px 0px 0px 0px;
+  }
+
+  #clear-button {
+    display: block;
+    width: 95%;
+    margin: 20px 0px 0px 0px;
+  }
 }
