@@ -173,7 +173,6 @@ button:hover {
 
   #clear-button {
     width: 95%;
-
     position: relative;
   }
 
@@ -198,13 +197,11 @@ button:hover {
 
   #guess-button {
     display: block;
-    width: 100%;
     margin: 20px 0px 0px 0px;
   }
 
   #clear-button {
     display: block;
-    width: 95%;
     margin: 20px 0px 0px 0px;
   }
 }
