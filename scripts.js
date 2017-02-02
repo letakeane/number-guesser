@@ -90,7 +90,6 @@ showButton.addEventListener('click', function() {
 hideButton.addEventListener('click', function() {
   instructionText.classList.add('hide');
   showButton.classList.remove('hide');
-
 });
 
 //when user clicks submitminmax button
