@@ -113,6 +113,7 @@ p {
   background-color: transparent;
   border: none;
   color: #EB008B;
+  font-size: 14px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -171,6 +172,17 @@ a {
   padding: 2px 20px;
 }
 
+#scary {
+  margin-top: 50px;
+}
+
+#original-return {
+  font-size: 14px;
+  padding: 0px 10px;
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
 /*mobile layout*/
 @media screen and (max-width: 700px) {
   input {
@@ -212,8 +224,19 @@ a {
     margin: auto;
     width: 90%;
   }
+
+  #instruction-paragraph {
+    width: 85%;
+  }
+
   .showhide:hover {
     width: 60%;
+  }
+
+  #original-return {
+    margin: auto;
+    width: 40%;
+    margin-bottom: 10px;
   }
 }
 
@@ -244,7 +267,16 @@ a {
     width: 100%;
   }
 
+  #minmax {
+    margin-top: 20px;
+  }
+
   .minmax-input {
     width: 95%;
-}
+  }
+
+  #original-return {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
