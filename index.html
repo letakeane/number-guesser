@@ -9,17 +9,17 @@
   </head>
 
   <body>
-    <header>
+    <header role="banner">
       <h1><span id="number-title">Number</span> <span id="guesser-title">Guesser</span></h1>
     </header>
 
     <!--MAIN-->
     <!--GUESS AREA-->
-    <div id="input-buttons-group">
+    <section id="input-buttons-group">
     <input id="user-guess" placeholder="Enter your guess">
       <button id="guess-button" class="button">Guess</button>
       <button id="clear-button" disabled>Clear</button>
-    </div>
+    </section>
 
     <!--RESULT AREA-->
     <p id="notification"></p>
@@ -27,12 +27,30 @@
     <p id="clue">Try it!</p>
 
     <!--RESET-->
-    <div id="reset-container">
+    <section id="reset-container">
       <button id="reset-button" disabled>Reset</button>
-    </div>
+    </section>
 
     <!--LINK TO LEVEL UP-->
-    <p class="level-link"><a href="levelup.html">Too easy? Try leveling up!</a></p>
+    <p class="level-link"><a href="#" id="show-level-up">Too easy? Try CHALLENGE MODE!</a></p>
+
+    <!--LEVEL UP SECTION-->
+    <section id="level-section" class="hidden">
+      <section class="instructions">
+        <button id="show" class="showhide">SHOW INSTRUCTIONS</button>
+        <section id="instruction-text" class="hide">
+          <p>You can set your own range of numbers! Why stop at 100?<!-- BUT ... For every correct answer, the maximum will increase by 10! And for every wrong answer, the mininum will decrease by 10! Right or wrong, the game. gets. HARDER.--></p>
+          <button id="hide" class="showhide">HIDE INSTRUCTIONS</button>
+        </section>
+      </section>
+
+      <form id="minmax" method="get">
+        <input id="user-min" class="minmax-input" placeholder="MIN"></input>
+        <input id="user-max" class="minmax-input" placeholder="MAX"></input>
+        <button id="submit-minmax" type="submit" value="submit">Set Range</button>
+      </form>
+      <p><span id="show-min" class="range-display">[YOUR MIN]</span> to <span id="show-max" class="range-display">[YOUR MAX]</span></p>
+    </section>
 
     <!--SCRIPT-->
     <script src="scripts.js"></script>

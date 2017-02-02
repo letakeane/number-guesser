@@ -1,15 +1,23 @@
 //input variables
 var userGuess = document.getElementById('user-guess');
+var userMin = document.getElementById('user-min');
+var userMax = document.getElementById('user-max');
 
 //button variables
 var guessButton = document.getElementById('guess-button');
 var clearButton = document.getElementById('clear-button');
 var resetButton = document.getElementById('reset-button');
+var showButton = document.getElementById('show');
+var hideButton = document.getElementById('hide');
+var submitMinMax = document.getElementById('submit-minmax');
+var showLevelUp = document.getElementById('show-level-up');
 
 //onscreen text variables
 var notification = document.getElementById('notification');
 var displayLastGuess = document.getElementById('display-last-guess');
 var clue = document.getElementById('clue');
+var levelSection = document.getElementById('level-section');
+var instructionText = document.getElementById('instruction-text');
 
 //other global variables
 var start = 1;
@@ -56,7 +64,7 @@ clearButton.addEventListener('click', function() {
 });
 
 //when user clicks RESET button
-resetButton.addEventListener('click', function () {
+function resetFunction() {
   clearButton.disabled = true;
   resetButton.disabled = true;
   notification.innerText = "";
@@ -64,4 +72,32 @@ resetButton.addEventListener('click', function () {
   clue.innerText = "Try it!";
   userGuess.value = null;
   secretNumber = nextSecret();
+};
+
+resetButton.addEventListener('click', resetFunction);
+
+//show and hide level up section
+showLevelUp.addEventListener('click', function() {
+  levelSection.classList.add('shown');
+});
+
+//show and hide instructions
+showButton.addEventListener('click', function() {
+  instructionText.classList.remove('hide');
+  showButton.classList.add('hide');
+});
+
+hideButton.addEventListener('click', function() {
+  instructionText.classList.add('hide');
+  showButton.classList.remove('hide');
+
+});
+
+//when user clicks submitminmax button
+submitMinMax.addEventListener('click', function() {
+  document.getElementById('show-min').innerText = userMin.value;
+  document.getElementById('show-max').innerText = userMax.value;
+  start = parseInt(userMin.value, 10);
+  end = parseInt(userMax.value, 10);
+  resetFunction();
 });

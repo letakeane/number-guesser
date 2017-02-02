@@ -100,27 +100,63 @@ button:hover:enabled {
   width: 50%;
 }
 
-#user-define-group {
+p {
   text-align: center;
 }
 
-#user-min {
+.showhide {
+  background-color: transparent;
+  border: none;
+  color: #EB008B;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0px;
+  padding: 0px 10px;
+}
+
+.showhide:hover {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.hide {
+  display: none;
+}
+
+#instruction-text {
+  margin: auto;
+  width: 40%;
+}
+
+a {
+  color: #EB008B;
+}
+
+#level-section {
+  text-align: center;
+}
+
+.minmax-input {
   display: inline-block;
   text-align: center;
-  font-size: 16px;
+  font-size: 20px;
   width: 10em;
   margin: 10px;
 }
 
-#user-max {
-  display: inline-block;
-  text-align: center;
-  font-size: 16px;
-  width: 10em;
-  margin: 10px;
+.hidden {
+  display: none;
 }
 
+.shown {
+  display: block;
+  margin: auto;
+}
 
+#submit-minmax {
+  padding: 2px 20px;
+}
 
 /*mobile layout*/
 @media screen and (max-width: 700px) {
@@ -156,6 +192,11 @@ button:hover:enabled {
   #reset-button {
     width: 90%;
     display: block;
+  }
+
+  #instruction-text {
+    margin: auto;
+    width: 90%;
   }
 }
 
