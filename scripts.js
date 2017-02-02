@@ -153,7 +153,7 @@ submitMinMax.addEventListener('click', function() {
   resetFunction();
 });
 
-//when user returns to original game
+//when user returns to original game with button
 originalReturn.addEventListener('click', function (){
   challengeMode = false;
   start = 1;
