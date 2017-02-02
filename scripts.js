@@ -13,7 +13,6 @@ var submitMinMax = document.getElementById('submit-minmax');
 var showLevelUp = document.getElementById('show-level-up');
 var originalReturn = document.getElementById('original-return');
 var show = document.getElementById('show');
-var hideLevelUp = document.getElementById('hide-level-up');
 
 //onscreen text variables
 var notification = document.getElementById('notification');
@@ -120,15 +119,6 @@ showLevelUp.addEventListener('click', function() {
   showLevelUp.classList.add('hide');
   show.classList.remove('hide');
   minMax.classList.remove('hide');
-  hideLevelUp.classList.remove('hide');
-});
-
-hideLevelUp.addEventListener('click', function() {
-  levelSection.classList.remove('shown');
-  showLevelUp.classList.remove('hide');
-  show.classList.add('hide');
-  minMax.classList.add('hide');
-  hideLevelUp.classList.add('hide');
 });
 
 //show and hide instructions
@@ -169,7 +159,6 @@ originalReturn.addEventListener('click', function (){
   start = 1;
   end = 100;
   showLevelUp.classList.remove('hide');
-  hideLevelUp.classList.add('hide');
   show.classList.add('hide');
   userRange.classList.add('hide');
   minMax.classList.add('hide');
