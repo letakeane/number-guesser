@@ -109,6 +109,11 @@ p {
   text-align: center;
 }
 
+#hide-level-up {
+  text-align: center;
+  margin: auto;
+}
+
 .showhide {
   background-color: transparent;
   border: none;
