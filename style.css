@@ -72,6 +72,11 @@ button:hover:enabled {
   width: 24%;
 }
 
+#user-range {
+  font-size: 20px;
+  font-weight: 700;
+}
+
 #notification {
   color: #404041;
   text-align: center;
@@ -113,11 +118,14 @@ p {
   display: inline-block;
   margin: 0px;
   padding: 0px 10px;
+  width: 40%;
 }
 
 .showhide:hover {
   color: #ffffff;
   font-weight: 700;
+  margin: 0px;
+  padding: 0px 10px;
 }
 
 .hide {
@@ -125,6 +133,11 @@ p {
 }
 
 #instruction-text {
+  margin: auto;
+  width: 90%;
+}
+
+#instruction-paragraph {
   margin: auto;
   width: 40%;
 }
@@ -191,6 +204,7 @@ a {
 
   #reset-button {
     width: 90%;
+    margin: auto;
     display: block;
   }
 
@@ -198,10 +212,13 @@ a {
     margin: auto;
     width: 90%;
   }
+  .showhide:hover {
+    width: 60%;
+  }
 }
 
 
-@media screen and (max-width: 645px;) {
+@media screen and (max-width: 500px;) {
   button{
     width: 100%;
     margin: 20px 0px 5px 0px;
@@ -216,4 +233,18 @@ a {
     display: block;
     margin: 20px 0px 0px 0px;
   }
+
+  # {
+    padding: 0px;
+    font-size: 8px;
+  }
+
+  .showhide:hover {
+    padding: 0px;
+    width: 100%;
+  }
+
+  .minmax-input {
+    width: 95%;
+}
 }

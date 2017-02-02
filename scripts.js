@@ -18,11 +18,15 @@ var displayLastGuess = document.getElementById('display-last-guess');
 var clue = document.getElementById('clue');
 var levelSection = document.getElementById('level-section');
 var instructionText = document.getElementById('instruction-text');
+var userRange = document.getElementById('user-range');
+var showMin = document.getElementById('show-min');
+var showMax = document.getElementById('show-max');
 
 //other global variables
 var start = 1;
 var end = 100;
 var secretNumber = parseInt(nextSecret(), 10);
+var challengeMode = false;
 
 //functions!
 function nextSecret() {
@@ -47,10 +51,25 @@ guessButton.addEventListener('click', function() {
     notification.innerText = "Your last guess was";
       if (intGuess === secretNumber) {
         clue.innerText = "BOOM!";
+        if (challengeMode == true) {
+          end = end + 10;
+          showMax.innerText = end;
+          resetFunction();
+        }
       } else if (intGuess > secretNumber) {
         clue.innerText = "That is too high";
+          if (challengeMode == true) {
+            start = start - 10;
+            showMin.innerText = start;
+            resetFunction();
+          }
       } else if (intGuess < secretNumber) {
         clue.innerText = "That is too low";
+          if (challengeMode == true) {
+            start = start - 10;
+            showMin.innerText = start;
+            resetFunction();
+          }
       } else {
         clue.innerText = "Please guess a number";
       }
@@ -64,14 +83,24 @@ clearButton.addEventListener('click', function() {
 });
 
 //when user clicks RESET button
-function resetFunction() {
+function resetDisplay() {
   clearButton.disabled = true;
   resetButton.disabled = true;
   notification.innerText = "";
   displayLastGuess.innerText = "?";
   clue.innerText = "Try it!";
   userGuess.value = null;
-  secretNumber = nextSecret();
+};
+
+function resetFunction() {
+  if (challengeMode == true) {
+    start;
+    end;
+    userRange.classList.remove('hide');
+    secretNumber = nextSecret();
+  } else {
+  resetDisplay();
+  }
 };
 
 resetButton.addEventListener('click', resetFunction);
@@ -92,10 +121,19 @@ hideButton.addEventListener('click', function() {
   showButton.classList.remove('hide');
 });
 
+//when user enters input into minmax form
+userMax.addEventListener('keyup', function() {
+    submitMinMax.disabled = false;
+});
+
 //when user clicks submitminmax button
 submitMinMax.addEventListener('click', function() {
-  document.getElementById('show-min').innerText = userMin.value;
-  document.getElementById('show-max').innerText = userMax.value;
+  challengeMode = true;
+  start = userMin.value;
+  end = userMax.value;
+  userRange.classList.remove('hide');
+  showMin.innerText = start;
+  showMax.innerText = end;
   start = parseInt(userMin.value, 10);
   end = parseInt(userMax.value, 10);
   resetFunction();

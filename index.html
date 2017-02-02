@@ -22,6 +22,7 @@
     </section>
 
     <!--RESULT AREA-->
+    <p id="user-range" class="hide"><span id="show-min" class="range-display">[YOUR MIN]</span> to <span id="show-max" class="range-display">[YOUR MAX]</span></p>
     <p id="notification"></p>
     <p id="display-last-guess">?</p>
     <p id="clue">Try it!</p>
@@ -37,19 +38,18 @@
     <!--LEVEL UP SECTION-->
     <section id="level-section" class="hidden">
       <section class="instructions">
-        <button id="show" class="showhide">SHOW INSTRUCTIONS</button>
+        <button id="show" class="showhide">Show instructions</button>
         <section id="instruction-text" class="hide">
-          <p>You can set your own range of numbers! Why stop at 100?<!-- BUT ... For every correct answer, the maximum will increase by 10! And for every wrong answer, the mininum will decrease by 10! Right or wrong, the game. gets. HARDER.--></p>
-          <button id="hide" class="showhide">HIDE INSTRUCTIONS</button>
+          <p id="instruction-paragraph">You can set your own range of numbers! Why stop at 100? <strong>BUT BEWARE:</strong> For every correct answer, the maximum will <em>increase by 10.</em> And for every wrong answer, the mininum will <em>decrease by 10!</em> Right or wrong, the game. <bold>gets</bold>. <bold>HARDER</bold>!</p>
+          <button id="hide" class="showhide">Hide instructions</button>
         </section>
       </section>
 
       <form id="minmax" method="get">
         <input id="user-min" class="minmax-input" placeholder="MIN"></input>
         <input id="user-max" class="minmax-input" placeholder="MAX"></input>
-        <button id="submit-minmax" type="submit" value="submit">Set Range</button>
+        <button id="submit-minmax" type="submit" value="submit" disabled>Set Range</button>
       </form>
-      <p><span id="show-min" class="range-display">[YOUR MIN]</span> to <span id="show-max" class="range-display">[YOUR MAX]</span></p>
     </section>
 
     <!--SCRIPT-->
