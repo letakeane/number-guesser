@@ -44,7 +44,7 @@ input {
 }
 
 button{
-  background-color: #D0D2D3;
+  background-color: #929497;
   border: none;
   border-radius: 15px;
   color: #ffffff;
@@ -56,36 +56,20 @@ button{
   margin: 20px;
 }
 
-button:hover {
-  background-color: #EB008B;
-}
-
-#guess-button {
-  display: inline-block;
-  background-color: #929497;
-  width: 22%;
-}
-
-#guess-button:hover {
+button:hover:enabled {
   background-color: #EB008B;
 }
 
 #clear-button {
-  display: inline-block;
-  width: 22%;
+  width: 24%;
 }
 
-#clear-button:hover {
+:disabled {
   background-color: #D0D2D3;
 }
 
-.clear-enable {
-  background-color: #929497;
-  width: 22%;
-}
-
-.clear-enable:hover {
-  background-color: #EB008B;
+.button {
+  width: 24%;
 }
 
 #notification {
@@ -99,7 +83,7 @@ button:hover {
   font-size: 200px;
   font-weight: 300;
   text-align: center;
-  margin: -20px 0px 10px 0px;
+  margin: -20px 0px;
 }
 
 #clue {
@@ -114,18 +98,6 @@ button:hover {
 
 #reset-button {
   width: 50%;
-}
-
-#reset-button:hover{
-  background-color: #D0D2D3;
-}
-
-.reset-enable {
-  background-color: #929497;
-}
-
-.reset-enable:hover {
-  background-color: #EB008B;
 }
 
 #user-define-group {
@@ -182,9 +154,8 @@ button:hover {
   }
 
   #reset-button {
-    width: 95%;
+    width: 90%;
     display: block;
-    margin: 20px;
   }
 }
 

@@ -17,26 +17,24 @@
     <!--GUESS AREA-->
     <div id="input-buttons-group">
     <input id="user-guess" placeholder="Enter your guess">
-      <button id="guess-button">Guess</button>
-      <button id="clear-button">Clear</button>
+      <button id="guess-button" class="button">Guess</button>
+      <button id="clear-button" disabled>Clear</button>
     </div>
 
     <!--RESULT AREA-->
-    <p id="notification">Your last guess was</p>
+    <p id="notification"></p>
     <p id="display-last-guess">?</p>
     <p id="clue">Try it!</p>
 
     <!--RESET-->
     <div id="reset-container">
-      <button id="reset-button">Reset</button>
+      <button id="reset-button" disabled>Reset</button>
     </div>
 
-    <!--USER DEFINED MIN MAX-->
-    <div id="user-define-group">
-      <p id="user-set">Set your own range.</p>
-      <input id="user-min" placeholder="Min">
-      <input id="user-max" placeholder="Max">
-    </div>
+    <!--LINK TO LEVEL UP-->
+    <p class="level-link"><a href="levelup.html">Too easy? Try leveling up!</a></p>
 
-<!--SCRIPT-->
-<script src="scripts.js"></script>
+    <!--SCRIPT-->
+    <script src="scripts.js"></script>
+  </body>
+</html>

@@ -1,9 +1,7 @@
 //input variables
 var userGuess = document.getElementById('user-guess');
-var userMin = document.getElementById('user-min');
-var userMax = document.getElementById('user-max');
 
-//buttons variables
+//button variables
 var guessButton = document.getElementById('guess-button');
 var clearButton = document.getElementById('clear-button');
 var resetButton = document.getElementById('reset-button');
@@ -14,25 +12,32 @@ var displayLastGuess = document.getElementById('display-last-guess');
 var clue = document.getElementById('clue');
 
 //other global variables
-var secretNumber = resetFunction();
+var start = 1;
+var end = 100;
+var secretNumber = parseInt(nextSecret(), 10);
 
 //functions!
-//button response to user adding input
-userGuess.addEventListener('keyup', function (){
-  clearButton.classList.add('clear-enable');
-  resetButton.classList.add('reset-enable');
+function nextSecret() {
+  return Math.floor(Math.random() * (((end - start) + 1) + start));
+}
+
+//enable disabled buttons
+userGuess.addEventListener('keyup', function() {
+    clearButton.disabled = false;
+    resetButton.disabled = false;
 });
 
 //when user inputs guess and clicks GUESS button
 guessButton.addEventListener('click', function() {
   var intGuess = parseInt(userGuess.value, 10);
-  if (intGuess < 1) {
-    alert("Please choose a number between 1 and 100");
-  } else if (intGuess > 100) {
-    alert("Please choose a number between 1 and 100");
+  if (intGuess < start) {
+    notification.innerText = "Please choose a number between " + start + " and " + end;
+  } else if (intGuess > end) {
+    notification.innerText = "Please choose a number between " + start + " and " + end;
   } else {
     displayLastGuess.innerText = userGuess.value;
-    if (intGuess === secretNumber) {
+    notification.innerText = "Your last guess was";
+      if (intGuess === secretNumber) {
         clue.innerText = "BOOM!";
       } else if (intGuess > secretNumber) {
         clue.innerText = "That is too high";
@@ -52,16 +57,11 @@ clearButton.addEventListener('click', function() {
 
 //when user clicks RESET button
 resetButton.addEventListener('click', function () {
-  secretNumber = resetFunction();
-  resetButton.classList.remove('reset-enable');
-  clearButton.classList.remove('clear-enable');
-});
-
-function resetFunction () {
+  clearButton.disabled = true;
+  resetButton.disabled = true;
+  notification.innerText = "";
   displayLastGuess.innerText = "?";
   clue.innerText = "Try it!";
   userGuess.value = null;
-  var newSecret = Math.floor(Math.random() * 101);
-  console.log(newSecret);
-  return newSecret;
-};
+  secretNumber = nextSecret();
+});
